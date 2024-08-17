@@ -2,7 +2,8 @@
 
 ## Plugin : Types 
 ## controllers : add.php 
-##  
+##
+  
 Url doc: http://magiaphp.com/docs/001/types/controllers/add.php 
 
 Fecha de creacion del documento: 2024-08-17 19:08:50 
@@ -10,8 +11,7 @@ Fecha de creacion del documento: 2024-08-17 19:08:50
 Documento accesible via la siguiente url:  
 
 `if (!permissions_has_permission($u_rol, $c, "create")) {    
-    header("Location: index.php?c=home&a=no_access");
-    
+    header("Location: index.php?c=home&a=no_access");    
     die("Error has permission ");
 }
 
