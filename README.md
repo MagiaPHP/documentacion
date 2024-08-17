@@ -7,3 +7,4 @@ Para instalar solo copia la carpeta entera en la raiz de tu web y listo
 
 
 
+https://www.mkdocs.org/getting-started/
