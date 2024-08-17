@@ -10,12 +10,16 @@ Fecha de creacion del documento: 2024-08-17 19:08:50
 
 Documento accesible via la siguiente url:  
 
-``if (!permissions_has_permission($u_rol, $c, "create")) {    
+`` 
+
+if (!permissions_has_permission($u_rol, $c, "create")) {    
     header("Location: index.php?c=home&a=no_access");    
     die("Error has permission ");
 }
 
-include view("types", "add");``
+include view("types", "add"); 
+
+``
 
 
 
@@ -23,7 +27,6 @@ include view("types", "add");``
 
 if (!permissions_has_permission($u_rol, $c, "create")) {
 
-    #mg si no tiene permiso lo redireccionamos 
 
     header("Location: index.php?c=home&a=no_access");
 
