@@ -1,25 +1,37 @@
-#add.php  
+# add.php  
 
-http://magiaphp.com 
+## Plugin : Types 
+## controllers : add.php 
+##  
+Url doc: http://magiaphp.com/docs/001/types/controllers/add.php 
 
-Fecha de creacion del documento: 2024-08-17 19:08:48 
+Fecha de creacion del documento: 2024-08-17 19:08:50 
 
 Documento accesible via la siguiente url:  
-Verificamos si el `$u_rol` en `$c` tiene permiso para `create` 
 
-`if (!permissions_has_permission($u_rol, $c, "create")) {`
-
-    si no tiene permiso lo redireccionamos 
+`
+if (!permissions_has_permission($u_rol, $c, "create")) {    
+    header("Location: index.php?c=home&a=no_access");
     
-    `header("Location: index.php?c=home&a=no_access");`
-    
-    y matamos el proceso 
+    die("Error has permission ");
+}
 
-`die("Error has permission ");`
-    
-`}`
+include view("types", "add");
+`
 
-si ha pasado el control anterior, incluimos la vista `add`                
 
-`include view("types", "add");`   http://localhost/index.php?c=types&a=add 
+#mg 1) Verificamos si el `$u_rol` en `$c` tiene permiso para `create` 
+if (!permissions_has_permission($u_rol, $c, "create")) {
+
+    #mg si no tiene permiso lo redireccionamos 
+    header("Location: index.php?c=home&a=no_access");
+
+    #mg y matamos el proceso 
+    die("Error has permission ");
+}
+
+#mg 2) si ha pasado el control anterior, incluimos la vista `add`                
+include view("types", "add");
+
+http://localhost/index.php?c=types&a=add 
 
